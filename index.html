@@ -16,39 +16,44 @@
 
 </head>
 
-<body>
-
 <!-- WIDGETS -->
 <!--navigation-->
- <div data-role="panel" id="mypanel">
+ <div data-role="panel" id="mypanel" display="reveal">
     <div data-role="header">
-        <a href="#"data-rel="close" class="ui-btn ui-nodisc-icon ui-icon-carat-l ui-btn-icon-notext">Icon only</a>
-            <h1>menu</h1>
-    </div><!-- /header -->
+        <a href="#"data-rel="close" class="ui-btn ui-nodisc-icon ui-icon-carat-l ui-btn-icon-notext ui-noboxshadow round">Icon only</a>
+            <h6> </h6>
+    </div>
+    <!-- /header -->
+    <a href="#home" data-ajax="false" data-rel="close" class="ui-btn ui-mini ui-icon-home ui-btn-icon-left">Home</a>
+    <a href="#quiz" data-ajax="false" data-rel="close" class="ui-btn ui-mini ui-icon-star ui-btn-icon-left">Quiz</a>
+    <a href="#stats" data-ajax="false" data-rel="close" class="ui-btn ui-mini ui-icon-user ui-btn-icon-left">Stats</a>
     <div class="ui-panel-inner">
-        <h3>Left Panel: Reveal</h3><p>This panel is positioned on the left with the reveal display mode. The panel markup is <em>after</em> the header, content and footer in the source order.</p><p>To close, click off the panel, swipe left or right, hit the Esc key, or use the button below:</p>
     </div>
 </div>
+
+
+<a href="#mypanel" data-ajax="false" id="menuBtn" class="ui-btn ui-nodisc-icon ui-icon-bars ui-btn-icon-notext ui-noboxshadow round">Icon only</a>
+
 <!-- END WIDGETS-->
 
-<!-- HOME -->
-<div data-role="page" id="home" class="navPage">
+<body>
 
-    <div data-role="header">
-    <a href="#mypanel" class="ui-btn ui-nodisc-icon ui-icon-bars ui-btn-icon-notext">Icon only</a>
+<!-- HOME -->
+<div data-role="page" id="home" class="addNav">
+
+    <div data-role="header" class="addMenuBtn">
         <h1>Welcome</h1>
     </div><!-- /header -->
 
     <div role="main" class="ui-content">
     </div><!-- /content -->
-    <div id="navigation"></div>
 
 </div>
 
 <!-- QUIZ -->
-<div data-role="page" id="quiz" class="navPage">
+<div data-role="page" id="quiz" class="addNav">
 
-    <div data-role="header">
+    <div data-role="header"  class="addMenuBtn">
         <h1>kanjiDex</h1>
     </div><!-- /header -->
 
@@ -58,9 +63,9 @@
 </div>
 
 <!-- STATS -->
-<div data-role="page" id="stats" class="navPage">
+<div data-role="page" id="stats" class="addNav">
 
-    <div data-role="header">
+    <div data-role="header"  class="addMenuBtn">
         <h1>Stats</h1>
     </div><!-- /header -->
 
@@ -71,7 +76,8 @@
 
 <!--SCRIPTS-->
 <script type="text/javascript">
-$( "#mypanel" ).appendTo( $( ".navPage" ) );
+$( "#menuBtn" ).appendTo( $( ".addMenuBtn" ) );
+$( "#mypanel" ).appendTo( $( ".addNav" ) );
 </script>
 <!--END SCRIPTS-->
 
