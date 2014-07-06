@@ -12,54 +12,68 @@
 <script src="jquery-1.11.1/jquery-1.11.1.js"></script>
 <script src="jquery.mobile-1.4.3/jquery.mobile-1.4.3.js"></script>
 
+<script src="jquery-ui-1.11.0/jquery-ui.js"></script>
 
-  <script src="jquery-ui-1.11.0/jquery-ui.js"></script>
 </head>
 
 <body>
 
-<!-- Start of first page -->
-<div data-role="page" id="foo">
+<!-- WIDGETS -->
+<!--navigation-->
+ <div data-role="panel" id="mypanel">
+    <div data-role="header">
+        <a href="#"data-rel="close" class="ui-btn ui-nodisc-icon ui-icon-carat-l ui-btn-icon-notext">Icon only</a>
+            <h1>menu</h1>
+    </div><!-- /header -->
+    <div class="ui-panel-inner">
+        <h3>Left Panel: Reveal</h3><p>This panel is positioned on the left with the reveal display mode. The panel markup is <em>after</em> the header, content and footer in the source order.</p><p>To close, click off the panel, swipe left or right, hit the Esc key, or use the button below:</p>
+    </div>
+</div>
+<!-- END WIDGETS-->
+
+<!-- HOME -->
+<div data-role="page" id="home" class="navPage">
 
     <div data-role="header">
-        <h1>Foo</h1>
+    <a href="#mypanel" class="ui-btn ui-nodisc-icon ui-icon-bars ui-btn-icon-notext">Icon only</a>
+        <h1>Welcome</h1>
     </div><!-- /header -->
 
     <div role="main" class="ui-content">
-        <p>I'm first in the source order so I'm shown as the page.</p>
-        <p>View internal page called <a href="#bar">bar</a></p>
-        <ul data-role="listview" data-autodividers="true" data-filter="true" data-inset="true">
-            <li data-icon="custom" id="skull"><a href="index.html">Adam Kinkaid <span class="ui-li-count">12</span></a></li>
-            <li data-icon="gear"><a href="index.html">Alex Wickerham</a></li>
-            <li><a href="index.html">Avery Johnson</a></li>
-            <li><a href="index.html">Bob Cabot</a></li>
-            <li><a href="index.html">Caleb Booth</a></li>
-            <li><a href="index.html">Christopher Adams</a></li>
-            <li><a href="index.html">Culver James</a></li>
-        </ul>
-
     </div><!-- /content -->
+    <div id="navigation"></div>
 
-    <div data-role="footer">
-        <h4>Page Footer</h4>
-    </div><!-- /footer -->
-</div><!-- /page -->
+</div>
 
-<!-- Start of second page -->
-<div data-role="page" id="bar">
+<!-- QUIZ -->
+<div data-role="page" id="quiz" class="navPage">
 
     <div data-role="header">
-        <h1>Bar</h1>
+        <h1>kanjiDex</h1>
     </div><!-- /header -->
 
     <div role="main" class="ui-content">
-        <p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
-        <p><a href="#foo">Back to foo</a></p>
     </div><!-- /content -->
 
-    <div data-role="footer">
-        <h4>Page Footer</h4>
-    </div><!-- /footer -->
-</div><!-- /page -->
+</div>
+
+<!-- STATS -->
+<div data-role="page" id="stats" class="navPage">
+
+    <div data-role="header">
+        <h1>Stats</h1>
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content">
+    </div><!-- /content -->
+
+</div>
+
+<!--SCRIPTS-->
+<script type="text/javascript">
+$( "#mypanel" ).appendTo( $( ".navPage" ) );
+</script>
+<!--END SCRIPTS-->
+
 </body>
 </html>
