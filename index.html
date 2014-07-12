@@ -76,9 +76,26 @@
 
 <!--SCRIPTS-->
 <script type="text/javascript">
+/*
 $( "#menuBtn" ).appendTo( $( ".addMenuBtn" ) );
 $( "#mypanel" ).appendTo( $( ".addNav" ) );
+
+<!--SCRIPTS-->
+<script type="text/javascript">
+var $panel = $('#panel-template .panel');
+var $menuBtn = $('#menuBtn-template .menuBtn');
+
+$('div[data-role=page]').each(function () {
+    var $page = $(this);
+    var panelId = 'panel-'+$page.attr('id');
+    var $pagePanel = $panel.clone().attr('id', panelId);
+    var $pageMenuBtn = $menuBtn.clone().attr('href', '#'+panelId);
+    $pagePanel.appendTo($page);
+    $pageMenuBtn.appendTo($('.addMenuBtn', $page));
+});
+*/
 </script>
+<!--END SCRIPTS-->
 <!--END SCRIPTS-->
 
 </body>
